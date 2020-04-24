@@ -186,6 +186,7 @@
         if (oldUserName == oldName) {
             for (let i = 1; i < generateId; i++) {
                 let chekedBlock = document.getElementById("nameId_" + i);
+                if (chekedBlock == null) continue;
                 if (chekedBlock.innerHTML.slice(3) == oldName + " ") {
                     chekedBlock.innerHTML = " : " + newName + " ";
                 }
@@ -193,6 +194,7 @@
         } else {
             for (let i = 1; i < generateId; i++) {
                 let chekedBlock = document.getElementById("nameId_" + i);
+                if (chekedBlock == null) continue;
                 if (chekedBlock.innerHTML.slice(1) == oldName + " : ") {
                     chekedBlock.innerHTML = " " + newName + " : ";
                 }
